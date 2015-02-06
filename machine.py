@@ -5,13 +5,13 @@ class CoinDispenser:
 
     def make_change(self, amount):
         if amount <= 4:
-            return [0,0,0,amount]
+            x = amount
+            return [0,0,0,x]
 
-        elif amount % 5 == 0 and amount < 10:
-            return[0,0,amount//5,0]
-
-        elif amount > 5 and amount < 10: 
-            return[0,0,amount//5,amount%5]
+        elif amount >= 5 and amount < 10:
+            x = amount // 5
+            y = amount % 5
+            return[0,0,x,y]
         elif amount >= 10 and amount <= 24:
             y = amount //10
             x = (amount % 10)  // 5     
