@@ -20,8 +20,8 @@ class CoinDispenser:
         elif amount >= 25:
             w = amount // 25
             y = (amount - (w*25)) // 10
-            x = 0
-            z = amount - ((w*25)+(y*10))
+            x = (amount - ((w*25)+(y*10))) // 5
+            z = (amount - ((w*25)+(y*10)+(x*5)))
             return[w,y,x,z]
             
         
